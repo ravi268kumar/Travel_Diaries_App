@@ -4,19 +4,14 @@
     android:background="@drawable/tdbg1"
     android:layout_height="fill_parent"
     android:layout_width="fill_parent"
-    android:orientation = "vertical"
-
-
-    >
+    android:alpha=".9"
+    android:orientation = "vertical">
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-
-
         android:orientation="vertical"
-
         android:paddingBottom="80dp"
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
@@ -33,114 +28,133 @@
             android:text="Sign Up"
             android:id="@+id/textView" />
 
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/u_id"
+            android:gravity="center">
+
         <EditText
-            android:id="@+id/editTextUsername"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/customized_box"
-            android:fontFamily="segoe UI"
+            android:layout_width="280dp"
+            android:layout_height="60dp"
             android:hint="User ID"
             android:inputType="text"
-            android:layout_marginTop="25dp"
-            android:layout_marginLeft="50dp"
-            android:layout_marginRight="50dp"
-            android:maxLength="20"
-            android:padding="10dp"
             android:singleLine="true"
+            android:textColorHint="#999999"
             android:textColor="#222222"
-            android:textColorHint="#999999" />
+            android:id="@+id/editTextUsername"
+            android:foregroundGravity="center"
+            />
+        </android.support.design.widget.TextInputLayout>
 
-        <EditText
-            android:id="@+id/editTextFirstName"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/customized_box"
-            android:fontFamily="segoe UI"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="50dp"
-            android:layout_marginRight="50dp"
-            android:hint="First Name"
-            android:inputType="text"
-            android:maxLength="20"
-            android:padding="10dp"
-            android:singleLine="true"
-            android:textColor="#222222"
-            android:textColorHint="#999999" />
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/u_id"
+            android:layout_marginTop="3dp"
+            android:id="@+id/f_name"
+            android:gravity="center">
 
-        <EditText
-            android:id="@+id/editTextLastName"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="50dp"
-            android:layout_marginRight="50dp"
-            android:background="@drawable/customized_box"
-            android:fontFamily="segoe UI"
-            android:hint="Last Name"
-            android:inputType="text"
-            android:layout_marginTop="10dp"
-            android:maxLength="20"
-            android:padding="10dp"
-            android:singleLine="true"
-            android:textColor="#222222"
-            android:textColorHint="#999999" />
+            <EditText
+                android:layout_width="280dp"
+                android:layout_height="60dp"
+                android:hint="First Name"
+                android:textColor="#222222"
+                android:inputType="text"
+                android:singleLine="true"
+                android:id="@+id/editTextFirstName"
+                android:textColorHint="#999999"
+                android:foregroundGravity="center"
+                />
+
+        </android.support.design.widget.TextInputLayout>
 
 
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/l_name"
+            android:layout_below="@+id/f_name"
+            android:gravity="center">
 
-        <EditText
-            android:id="@+id/editTextEmail"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="50dp"
-            android:inputType="textEmailAddress"
-            android:layout_marginRight="50dp"
-            android:background="@drawable/customized_box"
-            android:fontFamily="segoe UI"
-            android:hint="Email ID"
-            android:layout_marginTop="10dp"
+            <EditText
+                android:layout_width="280dp"
+                android:layout_height="60dp"
+                android:fontFamily="segoe UI"
+                android:hint="Last Name"
+                android:inputType="text"
+                android:id="@+id/editTextLastName"
+                android:singleLine="true"
+                android:textColor="#222222"
+                android:foregroundGravity="center"
+                android:textColorHint="#999999"
+                />
 
-            android:maxLength="200"
-            android:padding="10dp"
-            android:singleLine="true"
-            android:textColor="#222222"
-            android:textColorHint="#999999" />
-
-        <EditText
-            android:id="@+id/editTextPassword"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="50dp"
-            android:layout_marginRight="50dp"
-
-            android:background="@drawable/customized_box"
-            android:fontFamily="segoe UI"
-            android:hint="Password"
-            android:inputType="textPassword"
-            android:padding="10dp"
-            android:password="true"
-            android:textColor="#222222"
-            android:textColorHint="#999999" />
+        </android.support.design.widget.TextInputLayout>
 
 
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/l_name"
+            android:layout_marginTop="3dp"
+            android:id="@+id/email_id_u"
+            android:gravity="center">
 
+            <EditText
+                android:layout_width="280dp"
+                android:layout_height="60dp"
+                android:fontFamily="segoe UI"
+                android:hint="Email ID"
+                android:singleLine="true"
+                android:textColor="#222222"
+                android:inputType="textEmailAddress"
+                android:textColorHint="#999999"
+                android:foregroundGravity="center"
+                android:id="@+id/editTextEmail"
+                />
+
+        </android.support.design.widget.TextInputLayout>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/email_id_u"
+            android:layout_marginTop="3dp"
+            android:id="@+id/passw"
+            android:gravity="center">
+
+            <EditText
+                android:layout_width="280dp"
+                android:layout_height="60dp"
+                android:fontFamily="segoe UI"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:password="true"
+                android:textColor="#222222"
+                android:textColorHint="#999999"
+                android:id="@+id/editTextPassword"
+                android:foregroundGravity="center"
+                />
+
+        </android.support.design.widget.TextInputLayout>
 
         <Button
             android:layout_marginTop="65dp"
             android:id="@+id/buttonRegister"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
             android:background="#f48342"
             android:fontFamily="segoe UI"
             android:gravity="center"
             android:onClick="clickNext"
             android:textColor="#ffffff"
-            android:text="NEXT"
-            android:textSize="15sp"
+            android:text="Register"
+            android:textSize="18dp"
             android:textStyle="normal"
             android:layout_gravity="center_horizontal" />
-
-
-
 
     </LinearLayout>
 

@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
@@ -43,6 +44,7 @@ public class LoginActivity extends AppCompatActivity {
     private String password;
     public int code;
     public String token;
+    TextView forgot_password_u;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +53,15 @@ public class LoginActivity extends AppCompatActivity {
 
         editTextUsername = (EditText) findViewById(R.id.uIDBox);
         editTextPassword = (EditText) findViewById(R.id.passBox);
+
+        forgot_password_u =(TextView) findViewById(R.id.forgot_password_user);
+        forgot_password_u.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent1=new Intent(LoginActivity.this,Forgot_Password.class);
+                startActivity(intent1);
+            }
+        });
 
 
     }
